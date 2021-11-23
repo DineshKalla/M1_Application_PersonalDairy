@@ -34,8 +34,8 @@ void login()
 	i=0; 
 		if(strcmp(uname,"user")==0 && strcmp(pword,"pass")==0)
 	{
-	printf("  \n\n\t\t             WELCOME TO PERSONAL DIARY MANAGEMENT SYSTEM \n\t\t\t             *** LOGIN IS SUCCESSFUL ***");
-	printf("\n\n\n\t\t\t\t     Press any key to continue...");
+	printf("  \n\n\t\t             WELCOME TO YOUR PERSONAL DIARY \n\t\t\t             *** LOGIN IS SUCCESSFUL ***");
+	printf("\n\n\n\t\t\t\t          Press any key to continue...");
 	getch();
 	break;
 	}
@@ -72,10 +72,10 @@ int main()
     while(1)
     {
         printf("\n\t\n\t:MAIN MENU:");
-        printf("\n\n\t[1]. ADD RECORD\t");
-        printf("\n\t[2]. VIEW RECORD\t");
-        printf("\n\t[3]. EDIT RECORD\t");
-        printf("\n\t[4]. DELETE RECORD\t");
+        printf("\n\n\t[1]. ADD NOTES\t");
+        printf("\n\t[2]. VIEW NOTES\t");
+        printf("\n\t[3]. EDIT NOTES\t");
+        printf("\n\t[4]. DELETE NOTES\t");
         printf("\n\t[5]. EDIT PASSWORD\t");
         printf("\n\t[6]. EXIT\t\t");
 
