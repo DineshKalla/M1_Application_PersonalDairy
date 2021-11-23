@@ -34,8 +34,8 @@ void login()
 	i=0; 
 		if(strcmp(uname,"user")==0 && strcmp(pword,"pass")==0)
 	{
-	printf("  \n\n\t\t             WELCOME TO PERSONAL DIARY MANAGEMENT SYSTEM \n\t\t\t             *** LOGIN IS SUCCESSFUL ***");
-	printf("\n\n\n\t\t\t\t     Press any key to continue...");
+	printf("  \n\n\t\t             WELCOME TO YOUR PERSONAL DIARY \n\t\t\t             *** LOGIN IS SUCCESSFUL ***");
+	printf("\n\n\n\t\t\t\t          Press any key to continue...");
 	getch();
 	break;
 	}
@@ -552,3 +552,4 @@ void deleterecord( )
     printf("\n\n\tPRESS ANY KEY TO EXIT...");
     getch();
 }
+
