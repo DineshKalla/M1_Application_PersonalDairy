@@ -8,10 +8,10 @@ int main()
     while(1)
     {
         printf("\n\t\n\t:MAIN MENU:");
-        printf("\n\n\t[1]. ADD RECORD\t");
-        printf("\n\t[2]. VIEW RECORD\t");
-        printf("\n\t[3]. EDIT RECORD\t");
-        printf("\n\t[4]. DELETE RECORD\t");
+        printf("\n\n\t[1]. ADD NOTES\t");
+        printf("\n\t[2]. VIEW NOTES\t");
+        printf("\n\t[3]. EDIT NOTES\t");
+        printf("\n\t[4]. DELETE NOTES\t");
         printf("\n\t[5]. EDIT PASSWORD\t");
         printf("\n\t[6]. EXIT\t\t");
 
