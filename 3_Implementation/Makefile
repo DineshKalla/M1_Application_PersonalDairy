@@ -5,8 +5,8 @@ PROJECT_NAME = PersonalDiary
 BUILD = build
 
 # All source code files
-SRC = project_main.c\
-src/PersonalDiary.c
+SRC = main.c\
+src/main.c
 
 # All test source files
 TEST_SRC = src/PersonalDiary.c\
