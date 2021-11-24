@@ -5,10 +5,10 @@ PROJECT_NAME = PersonalDiary
 BUILD = build
 
 # All source code files
-SRC = 3_Implementation/main.c\
+SRC = Src/Diary.c\
 
 # All test source files
-TEST_SRC = 3_Implementation/Unity/unity.c\
+TEST_SRC = Unity/unity.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
