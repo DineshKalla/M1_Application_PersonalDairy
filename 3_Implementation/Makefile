@@ -6,11 +6,12 @@ BUILD = build
 
 # All source code files
 SRC = main.c\
-src/main.c
+src/Diary_operations.c\
+src/Personal_Diary_func.c
 
 # All test source files
-TEST_SRC = src/PersonalDiary.c\
-test/test_PersonalDiary.c\
+TEST_SRC = src/Diary_operations.c\
+test/test_Diary_operations.c\
 unity/unity.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
@@ -19,15 +20,26 @@ TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 INC	= -Iinc\
 -Iunity\
 
-#Library Inlcudes
-#INCLUDE_LIBS = 
-INCLUDE_LIBS = -lcunit
+
 
 # Project Output name
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
 # Document files
 DOCUMENTATION_OUTPUT = documentation/html
+
+
+ ifdef OS
+    RM = rm
+    FixPath = $(subst /,\,$1)
+    EXEC = exe
+ else
+    ifeq ($(shell uname), Linux)
+       RM = rm -rf
+       FixPath = $1
+ 	    EXEC = out
+    endif
+ endif
 
 # Default target built
 $(PROJECT_NAME):all
@@ -36,11 +48,11 @@ $(PROJECT_NAME):all
 .PHONY: run clean test doc all
 
 all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
+	gcc $(SRC) $(INC) -o $(call FixPath,$(PROJECT_OUTPUT))
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
+	./$(call FixPath,$(PROJECT_OUTPUT))
 
 # Document the code using Doxygen
 doc:
@@ -48,25 +60,9 @@ doc:
 
 # Build and run the unit tests
 test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
+	gcc $(TEST_SRC) $(INC) -o $(call FixPath,$(TEST_OUTPUT).$(EXEC))
+	./$(call FixPath,$(TEST_OUTPUT).$(EXEC))
 
-analyze: test memcheck staticcheck coverage sanitize_check
-
-staticcheck:
-	cppcheck --enable=all -iunity .
-
-memcheck:
-	valgrind ./$(TEST_OUTPUT)
-
-sanitize_check:
-	gcc -fsanitize=address -fno-omit-frame-pointer $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
-
-coverage:$(TEST_SRC)
-	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
-	gcov -a PersonalDiary.c
 
 # Remove all the built files, invoke by `make clean`
 clean:
