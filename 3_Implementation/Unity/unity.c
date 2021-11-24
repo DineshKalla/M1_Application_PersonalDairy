@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@DineshKalla 
-samstyle321
-/
-M1_App_Billing_System
-Public
-1
-013
-Code
-Issues
-1
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-M1_App_Billing_System/3_Implementation/unity/unity.c
-@samstyle321
-samstyle321 Folder structure in implementation
-Latest commit 838370e 5 days ago
- History
- 1 contributor
-2110 lines (1905 sloc)  63.9 KB
-   
 /* =========================================================================
     Unity Project - A Test Framework for C
     Copyright (c) 2007-21 Mike Karlesky, Mark VanderVoord, Greg Williams
@@ -2139,16 +2108,3 @@ int UnityTestMatches(void)
 
 #endif /* UNITY_USE_COMMAND_LINE_ARGS */
 /*-----------------------------------------------*/
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
