@@ -1,8 +1,16 @@
-#include "../inc/Diary_operations.h"
-
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<string.h>
+int password();
+void addrecord();
+void viewrecord();
+void editrecord();
+void editpassword();
+void deleterecord();
 void login()
 {
-	int a=0,i=0;
+    int a=0,i=0;
     char uname[10],c=' '; 
     char pword[10],code[10];
     char user[10]="user";
