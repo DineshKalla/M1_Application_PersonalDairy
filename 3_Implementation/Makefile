@@ -6,11 +6,10 @@ BUILD = build
 
 # All source code files
 SRC = main.c\
-src/Diary_func.c
+src/Diary.c
 
 # All test source files
-TEST_SRC = src/test/test_Diary_operations.c\
-Unity/unity.c\
+TEST_SRC = src/Unity/unity.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
