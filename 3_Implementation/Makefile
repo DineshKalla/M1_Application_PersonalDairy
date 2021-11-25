@@ -5,7 +5,7 @@ PROJECT_NAME = PersonalDiary
 BUILD = build
 
 # All source code files
-SRC = Src/Diary.c\
+SRC = Src/ProjectMain.c\
 
 # All test source files
 TEST_SRC = Unity/unity.c\
